@@ -17,7 +17,7 @@ module.exports = function(store, passport) {
                 }
 
                 next('Authentication error.');
-        });
+            });
 
         })
     }
