@@ -1,0 +1,22 @@
+{
+  "name": "koa-passport-socket.io",
+  "version": "1.0.0",
+  "description": "use koa-passport authentication on socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ephigabay/koa-passport-socket.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ephigabay/koa-passport-socket.io/issues"
+  },
+  "homepage": "https://github.com/ephigabay/koa-passport-socket.io#readme",
+  "dependencies": {
+    "co": "4.6.0"
+  }
+}
