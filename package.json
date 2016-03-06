@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ephigabay/koa-passport-socket.io#readme",
   "dependencies": {
-    "co": "4.6.0"
+    "co": "4.6.0",
+    "cookie": "0.2.3"
   }
 }
