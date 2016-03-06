@@ -10,14 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/ephigabay/koa-passport-socket.io.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ephi Gabay",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ephigabay/koa-passport-socket.io/issues"
   },
   "homepage": "https://github.com/ephigabay/koa-passport-socket.io#readme",
   "dependencies": {
-    "co": "4.6.0",
-    "cookie": "0.2.3"
+    "co": "^4.6.0",
+    "cookie": "^0.2.3"
   }
 }
