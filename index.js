@@ -11,7 +11,7 @@ module.exports = function(store, passport) {
 
             passport.deserializeUser(session.passport.user, (error, user) => {
 
-                if (!error) {
+                if (!error && user) {
                     socket.user = user;
                     return next();
                 }
