@@ -5,6 +5,11 @@ var cookie = require('cookie'),
 
 module.exports = function(store, passport) {
     return function(socket, next) {
+        
+        if(!socket.handshake.headers.cookie) {
+            return next('Didn\'t receive cookies');
+        }
+        
         let cookies = cookie.parse(socket.handshake.headers.cookie);
         co(function *() {
             var session = yield store.get('koa:sess:' + cookies['koa.sid']);
