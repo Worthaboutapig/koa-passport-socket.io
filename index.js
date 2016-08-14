@@ -1,4 +1,4 @@
-'use strict';
+	'use strict';
 
 var cookie = require('cookie'),
     co = require('co');
