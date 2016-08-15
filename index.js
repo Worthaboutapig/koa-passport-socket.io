@@ -13,6 +13,10 @@ module.exports = function(store, passport) {
         let cookies = cookie.parse(socket.handshake.headers.cookie);
         co(function *() {
             var session = yield store.get('koa:sess:' + cookies['koa.sid']);
+            
+            if(!session) {
+	        return next('Didn\'t find session for user. Session id: ' + cookies['koa.sid']);
+	    }
 
             passport.deserializeUser(session.passport.user, (error, user) => {
 
