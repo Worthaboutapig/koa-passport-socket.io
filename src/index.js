@@ -11,11 +11,11 @@ export default function({ store, cookieName, userDeserializer }) {
     if (sessionId) {
       const session = await store.get(sessionId);
       if (!session) {
-        await next(`Could not locate any user session in the session store using id: ${sessionId}`);
+        return next(`Could not locate any user session in the session store using id: ${sessionId}`);
       }
 
       if (!session.passport || !session.passport.user) {
-        await next(`Session passport user missing using  id: ${sessionId}`);
+        return next(`Session passport user missing using  id: ${sessionId}`);
       }
 
       socket.user = await userDeserializer(session.passport.user);
