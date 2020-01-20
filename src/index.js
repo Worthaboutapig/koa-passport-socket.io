@@ -1,6 +1,6 @@
 import cookie from "cookie";
 
-export default function({ store, cookieName, userDeserializer, logger }) {
+export default function({ store, cookieName, userDeserializer, logger } = {}) {
   return async function(socket, next) {
     try {
       const _cookie = socket.handshake.headers.cookie || socket.request.headers.cookie;
@@ -26,8 +26,8 @@ export default function({ store, cookieName, userDeserializer, logger }) {
         await next(`Could not locate any session cookie for cookie name: ${cookieName}`);
       }
     } catch (error) {
-      logger.error(error);
-      await next(error);
+      logger && logger.error(error);
+      await next("Error identiting user.");
     }
   };
 }
