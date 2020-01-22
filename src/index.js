@@ -8,6 +8,9 @@ export default function({ store, cookieName, userDeserializer, logger } = {}) {
         await next("No cookies available on the socket handshake");
       }
 
+      if (typeof _cookie !== "string") {
+        logger && logger.error("Cookie is not a string", { data: { cookie: _cookie, handshakeHeaders: socket.handshake.headers, requestHeaders: socket.request.headers.cookie });
+      }
       const cookies = cookie.parse(_cookie);
       const sessionId = typeof cookieName === "function" ? cookieName(cookies, socket) : cookieName && cookies[cookieName];
       if (sessionId) {
