@@ -1,6 +1,6 @@
 {
   "name": "koa-passport-socket.io",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "use koa-passport authentication on socket.io",
   "main": "src/index.js",
   "module": "src/index.js",
