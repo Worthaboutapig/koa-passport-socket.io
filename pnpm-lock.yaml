@@ -1,12 +1,12 @@
 dependencies:
-  cookie: 0.2.4
-lockfileVersion: 5.1
+  cookie: 0.4.1
+lockfileVersion: 5.2
 packages:
-  /cookie/0.2.4:
+  /cookie/0.4.1:
     dev: false
     engines:
       node: '>= 0.6'
     resolution:
-      integrity: sha1-qMFVqnubLPLE0y68e5oKoojMxr0=
+      integrity: sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA==
 specifiers:
-  cookie: ^0.2.4
+  cookie: ^0.4.1
